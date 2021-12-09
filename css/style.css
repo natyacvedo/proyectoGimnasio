@@ -1,0 +1,40 @@
+body{
+  background:black;
+}
+
+.registroButton{
+  width: 310px;
+  height:40px ;
+
+}
+  
+.letrasRegistro{
+    color: #a62b70 ;
+}
+
+
+
+.fontPruebaDos{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.logoV{
+  height: 150px;
+}
+
+.logoModal{
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+
+.botonSalida{
+  margin: 10px;
+  color: red;
+}
+
+.colorModal{
+  background-image: url(../img/imgModalDos.jpeg);
+  background-position: center;
+}
+
