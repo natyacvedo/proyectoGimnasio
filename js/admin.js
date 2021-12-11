@@ -1,14 +1,21 @@
-import {campoObligatorio, validarNumeros, validarUrl, validarFormulario} from "./validaciones.js"
+import {
+  campoObligatorio,
+  validarNumeros,
+  validarUrl,
+  validarFormulario,
+} from "./validaciones.js";
+import { NuevoProducto } from "./claseProducto.js";
 
-//traigo los elementos a los que quiero aplicarle un evento
+
 let inputCodigo = document.querySelector("#codigo");
 let inputProducto = document.querySelector("#producto");
 let inputDescripcion = document.querySelector("#descripcion");
 let inputCantidad = document.querySelector("#cantidad");
 let inputUrl = document.querySelector("#url");
 let formularioProducto = document.querySelector("#formProducto");
+let listadoProductos = [];
 
-//aplico el evento al elemento que traje
+
 inputCodigo.addEventListener("blur", () => {
   campoObligatorio(inputCodigo);
 });
@@ -26,16 +33,38 @@ inputUrl.addEventListener("blur", () => {
 });
 formularioProducto.addEventListener("submit", guardarProducto);
 
-function guardarProducto(e){
-e.preventDefault()
-if(validarFormulario(inputCodigo, inputProducto, inputDescripcion, inputCantidad, inputUrl)){
+function guardarProducto(e) {
+  e.preventDefault();
+  if (
+    validarFormulario(
+      inputCodigo,
+      inputProducto,
+      inputDescripcion,
+      inputCantidad,
+      inputUrl
+    )
+  ) {
     crearProducto();
-
+  }
 }
 
+function crearProducto() {
+  let nuevoProducto = new NuevoProducto(
+    inputCodigo.value,
+    inputProducto.value,
+    inputDescripcion.value,
+    inputCantidad.value,
+    inputUrl.value
+  );
+  listadoProductos.push(nuevoProducto);
+  limpiarFormulario();
 }
 
-function crearProducto(){
-    console.log("crear product")
-    
+function limpiarFormulario() {
+  formularioProducto.reset();
+  inputCodigo.className = "form-control";
+  inputProducto.className = "form-control";
+  inputDescripcion.className = "form-control";
+  inputCantidad.className = "form-control";
+  inputUrl.className = "form-control";
 }
