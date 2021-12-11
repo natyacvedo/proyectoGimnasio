@@ -13,7 +13,7 @@ let inputDescripcion = document.querySelector("#descripcion");
 let inputCantidad = document.querySelector("#cantidad");
 let inputUrl = document.querySelector("#url");
 let formularioProducto = document.querySelector("#formProducto");
-let listadoProductos = [];
+let listadoProductos = JSON.parse(localStorage.getItem("keyLocalStorage")) || [];
 
 
 inputCodigo.addEventListener("blur", () => {
@@ -58,6 +58,7 @@ function crearProducto() {
   );
   listadoProductos.push(nuevoProducto);
   limpiarFormulario();
+  guardarLocalStorage();
 }
 
 function limpiarFormulario() {
@@ -67,4 +68,8 @@ function limpiarFormulario() {
   inputDescripcion.className = "form-control";
   inputCantidad.className = "form-control";
   inputUrl.className = "form-control";
+}
+
+function guardarLocalStorage(){
+  localStorage.setItem("keyLocalStorage", JSON.stringify(listadoProductos))
 }
