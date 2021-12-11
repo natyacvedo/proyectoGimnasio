@@ -36,5 +36,6 @@ if(validarFormulario(inputCodigo, inputProducto, inputDescripcion, inputCantidad
 }
 
 function crearProducto(){
-    console.log("crear producto")
+    console.log("crear product")
+    
 }
