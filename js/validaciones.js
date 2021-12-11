@@ -47,7 +47,6 @@ export function validarGeneral(campoNombre, campoEmail, campoTelefono, campoCont
         campoRequerido(campoEmail) &&
         validarNumeros(campoTelefono) &&
         validarContraseña(campoContraseña)) {
-        console.log('los datos estan listos para ser enviados');
         // alerta.className = 'alert alert-danger my-5 d-none';
         return true;
     } else {

@@ -89,7 +89,6 @@ function crearFila(usuario) {
     <td>${usuario.telefono}</td>
     <td>${usuario.contraseña}</td>
     <td>
-    <button class="btn btn-warning" onclick="prepararEdicionUsuario('${usuario.nombre}')">Editar</button>
     <button class="btn btn-danger" onclick="borrarUsuario(${usuario.nombre})">Borrar</button>
   </td>
   </tr>`;
@@ -100,20 +99,6 @@ function cargaInicial() {
         //crear las filas
         listaUsuarios.forEach((itemUsuario) => { crearFila(itemUsuario) });
     }
-}
-
-window.prepararEdicionUsuario = function (nombre) {
-    console.log("desde editar");
-    // buscar el usuario en el arreglo 
-    let usuarioBuscado = listaUsuario.find((itemUsuario) => { return itemUsuario.nombre == nombre });
-    console.log(usuarioBuscado);
-    // mostrar el usuario en el formulario
-    campoNombre.value = usuarioBuscado.nombre;
-    campoEmail.value = usuarioBuscado.email;
-    campoTelefono.value = usuarioBuscado.telefono;
-    campoContraseña.value = usuarioBuscado.contraseña;
-    // cambio mi variable usuarioExistente
-    usuarioExistente = true;
 }
 
 function modificarUsuario() {
