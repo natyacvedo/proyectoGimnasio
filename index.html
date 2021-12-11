@@ -13,61 +13,53 @@
   <script src="https://kit.fontawesome.com/6e90fa897f.js" crossorigin="anonymous"></script>
   <title>Proyecto Gimnasio</title>
 </head>
-
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navfixed">
+      <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="img/LogoV.png" alt="logo de pagina Gimnasio" width="150" />
+            <img src="img/LogoV.png" alt="Logo del Navbar "width="80px">   
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGimnasio"
-          aria-controls="navbarGimnasio" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarGimnasio">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item mx-5">
-              <a href="#" title="" class="nav-accounts-link">Registro</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fuenteAlumi fs-5 ">
+            <li class="nav-item">
+              <a class="text-primary nav-link" aria-current="page" href="paginas/login.html">Login</a>
+            </li> 
+            <li class="nav-item">
+              <a class="text-primary nav-link" href="pages/contacto.html">Store</a>
             </li>
-            <li class="nav-item mx-5">
-              <a href="#" title="" class="nav-accounts-link">Inicio de sesión</a>
+            <li class="nav-item">
+              <a class="text-primary nav-link" href="paginas/quienesSomos.html">Quienes Somos</a>
             </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarGimnasio">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item mx-5">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item mx-5">
-              <a class="nav-link" href="#">Quienes somos</a>
-            </li>
-            <li class="nav-item m">
-              <a class="nav-link" href="#">STORE</a>
+            <li class="nav-item">
+              <form class="d-flex">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                </div>
+              </form>
             </li>
           </ul>
-          <form class="d-flex">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
-                aria-describedby="button-addon2">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
-            </div>
-          </form>
         </div>
       </div>
     </nav>
   </header>
   <main>
-    <section>
+    <section class="mslider">
       <div id="bannerGimnasio" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#bannerGimnasio" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#bannerGimnasio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#bannerGimnasio" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
         <div class="carousel-inner">
@@ -80,17 +72,17 @@
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#bannerGimnasio" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="visually-hidden">Anterior</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#bannerGimnasio" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="visually-hidden">Siguiente</span>
         </button>
       </div>
     </section>
     <!--  Banner de Productos -->
-    <h2 class="display-6 text-center my-5">Lo mas vendido</h2>
-    <div class="container-fluid">
+    <h2 class="display-6 text-center my-5">Lo más vendido</h2>
+    <div class="container">
       <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">

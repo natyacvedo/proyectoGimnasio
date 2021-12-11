@@ -4,7 +4,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.navfixed{
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    top: 0;
+}
 
+.mslider{
+    margin-top: 85px;
+}
 .colorFondo {
     background-color: #370247;
 }
