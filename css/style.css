@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.colorFondo {
+    background-color: #370247;
+}
+
+.colorBotonIS {
+    background-color: #c38ee6;
+}
+
+.colorSuscripcion {
+    background-color: #bc21bc;
+}
+
+.imgCircular {
+    border-radius: 50%;
+    
+}
+
+.imgSobreNosotros {
+    background-size: cover;
+}
+
+.bannerSobreNosotros {
+    width: 100%;
+    height: 405px;
+}
+
+.facebook:hover{
+    background: #41579A;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.twitter:hover{
+    background: #00acee;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.instagram:hover{
+    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.alink{
+    text-decoration: none;
+    color: black;
+    }
+.tiempo{
+    line-height: 30px;;
+    font-size: 15px;
+}
+
+.titleAbout{
+    margin-top: 80px;
+}
+.contenedorImg {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgCircular {
+    border-radius: 50%;
+    border:2px solid #023047 ;
+    width: 50%;
+    
+}
+
+.colorRaya {
+    background-color:#023047 ;
+    
+}
+
+.marginBotonesNav{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+@media all and (max-width: 576px){
+    .imgSlider{
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .imgNone{
+        display: none;
+    }
+
+    .redesResponsive{
+        justify-content: space-between;
+    }
+    
+    .logoResponsive{
+        text-align: center;
+    }
+
+    .marginBusquedaIndexResponsive{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+       
+}
