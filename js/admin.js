@@ -1,68 +1,21 @@
-campoObligatorio = (input) => {
-  //console.log("Desde la funcion campoObligatorio")
-  if (input.value.trim().length > 0) {
-    input.className = "form-control is-valid";
-    return true;
-  } else {
-    input.className = "form-control is-invalid";
-    return false;
-  }
-};
+import {
+  campoObligatorio,
+  validarNumeros,
+  validarUrl,
+  validarFormulario,
+} from "./validaciones.js";
+import { NuevoProducto } from "./claseProducto.js";
 
-validarNumeros = (input) => {
-  let expresion = /^[0-9]{1,3}$/;
-  if (expresion.test(input.value)) {
-    input.className = "form-control is-valid";
-    console.log("oknumeros");
-    return true;
-  } else {
-    input.className = "form-control is-invalid";
-    console.log("no son numeros")
-    return false;
-  }
-};
 
-validarUrl = (input) => {
-  let expresion = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
-  if (expresion.test(input.value)) {
-    input.className = "form-control is-valid";
-    console.log("desde validar url")
-    return true;
-  } else {
-    input.className = "form-control is-invalid";
-    console.log("no es una url")
-    return false;
-  }
-};
-
-function validarFormulario(e) {
-  e.preventDefault();
-  console.log("desde la funcion validar formulario");
-  let alerta = document.querySelector("#msjAlerta");
-  if(
-    campoObligatorio(inputCodigo) &&
-    campoObligatorio(inputProducto) &&
-    campoObligatorio(inputDescripcion) &&
-    validarNumeros(inputCantidad) &&
-    validarUrl(inputUrl)
-  ) {
-    console.log("los datos estan listos");
-    alerta.className = "alert alert-danger my-5 d-none";
-  } else {
-    console.log("los datos estan mal");
-    alerta.className = "alert alert-danger my-5";
-  }
-}
-
-//traigo los elementos a los que quiero aplicarle un evento
 let inputCodigo = document.querySelector("#codigo");
 let inputProducto = document.querySelector("#producto");
 let inputDescripcion = document.querySelector("#descripcion");
 let inputCantidad = document.querySelector("#cantidad");
 let inputUrl = document.querySelector("#url");
 let formularioProducto = document.querySelector("#formProducto");
+let listadoProductos = JSON.parse(localStorage.getItem("keyLocalStorage")) || [];
 
-//aplico el evento al elemento que traje
+
 inputCodigo.addEventListener("blur", () => {
   campoObligatorio(inputCodigo);
 });
@@ -78,4 +31,45 @@ inputCantidad.addEventListener("blur", () => {
 inputUrl.addEventListener("blur", () => {
   validarUrl(inputUrl);
 });
-formularioProducto.addEventListener("submit", validarFormulario);
+formularioProducto.addEventListener("submit", guardarProducto);
+
+function guardarProducto(e) {
+  e.preventDefault();
+  if (
+    validarFormulario(
+      inputCodigo,
+      inputProducto,
+      inputDescripcion,
+      inputCantidad,
+      inputUrl
+    )
+  ) {
+    crearProducto();
+  }
+}
+
+function crearProducto() {
+  let nuevoProducto = new NuevoProducto(
+    inputCodigo.value,
+    inputProducto.value,
+    inputDescripcion.value,
+    inputCantidad.value,
+    inputUrl.value
+  );
+  listadoProductos.push(nuevoProducto);
+  limpiarFormulario();
+  guardarLocalStorage();
+}
+
+function limpiarFormulario() {
+  formularioProducto.reset();
+  inputCodigo.className = "form-control";
+  inputProducto.className = "form-control";
+  inputDescripcion.className = "form-control";
+  inputCantidad.className = "form-control";
+  inputUrl.className = "form-control";
+}
+
+function guardarLocalStorage(){
+  localStorage.setItem("keyLocalStorage", JSON.stringify(listadoProductos))
+}
