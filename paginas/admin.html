@@ -8,13 +8,11 @@
     <meta name="description" content="tienda fitness" />
     <meta name="keysword" content="js, crud" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css">
     <title>Proyecto Gimnasio</title>
 </head>
 <body>
-    <header>
-        
-      </header>
-      <main class="container">
+      <main class="container" >
         <section class="my-5">
           <h1 class="display-3 text-center">Administrador productos</h1>
           <hr />
@@ -27,11 +25,11 @@
                 type="text"
                 class="form-control"
                 id="codigo"
-                placeholder="Ingresar un codigo"
+                placeholder="Ingresar un codigo"               
               />
-              <div >
-                  codigo alfanumerico
-              </div>
+              <div class="invalid-feedback">
+               Debe ingresar un código numérico
+              </div>             
             </div>
             <div class="mb-3">
               <label for="producto" class="form-label">Producto</label>
@@ -41,10 +39,16 @@
                 id="producto"
                 placeholder="Ej.Tobilleras"
               />
+              <div class="invalid-feedback">
+                Debe ingresar un producto
+              </div>
             </div>
             <div class="mb-3">
               <label for="Descripcion" class="form-label">Descripcion</label>
               <textarea id="descripcion" rows="3" class="form-control"></textarea>
+              <div class="invalid-feedback">
+                Debe ingresar una descripción
+              </div>
             </div>
             <div class="mb-3">
               <label for="cantidad" class="form-label">Cantidad</label>
@@ -54,21 +58,27 @@
                 id="cantidad"
                 placeholder="ej: 5"
               />
+              <div class="invalid-feedback">
+                Debe ingresar una cantidad menor a 1000
+              </div>
             </div>
             <div class="mb-3">
               <label for="url" class="form-label">URL</label>
               <input
                 type="text"
                 class="form-control"
-                id="URL"
+                id="url"
                 placeholder="http://127.0.0.1:5500/img.jpg"
               />
+              <div class="invalid-feedback">
+                Debe ingresar una URL
+              </div>
             </div>
-            <button class="btn btn-primary" onclick=generarNumero()>Guardar</button>
-          </form>
-          <div class="alert alert-danger my-5 d-none" role="alert" id="msjAlerta">
-            Debe completar todos los campos
-          </div>
+            <button class="btn btn-primary" type="submit">Guardar</button>                   
+        </form>
+        <div class="alert alert-danger my-5 d-none" role="alert" id="msjAlerta">
+          Completar todos los campos
+        </div>
         </section>
         <section class="my-5">
           <h2 class="display-3 text-center">Tabla de productos</h2>
@@ -86,7 +96,7 @@
                 <th>Producto</th>
                 <th>Descripcion</th>
                 <th>Cantidad</th>
-                <th>URL</th>
+                <th>Url</th>
                 <th>Acciones</th>
               </tr>
             </thead>
@@ -110,5 +120,7 @@
             </tbody>
           </table>
         </section>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/admin.js"></script>
 </body>
 </html>
