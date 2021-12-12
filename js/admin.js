@@ -6,16 +6,15 @@ import {
 } from "./validaciones.js";
 import { NuevoProducto } from "./claseProducto.js";
 
-
 let inputCodigo = document.querySelector("#codigo");
 let inputProducto = document.querySelector("#producto");
 let inputDescripcion = document.querySelector("#descripcion");
 let inputCantidad = document.querySelector("#cantidad");
 let inputUrl = document.querySelector("#url");
 let formularioProducto = document.querySelector("#formProducto");
-let listadoProductos = JSON.parse(localStorage.getItem("keyLocalStorage")) || [];
-
-
+let listadoProductos =
+  JSON.parse(localStorage.getItem("keyLocalStorage")) || [];
+  
 inputCodigo.addEventListener("blur", () => {
   campoObligatorio(inputCodigo);
 });
@@ -32,6 +31,8 @@ inputUrl.addEventListener("blur", () => {
   validarUrl(inputUrl);
 });
 formularioProducto.addEventListener("submit", guardarProducto);
+
+cargaInicial();
 
 function guardarProducto(e) {
   e.preventDefault();
@@ -59,6 +60,8 @@ function crearProducto() {
   listadoProductos.push(nuevoProducto);
   limpiarFormulario();
   guardarLocalStorage();
+  Swal.fire("Producto creado", "Su producto fue creado con éxito", "success");
+  crearFila(nuevoProducto);
 }
 
 function limpiarFormulario() {
@@ -70,6 +73,29 @@ function limpiarFormulario() {
   inputUrl.className = "form-control";
 }
 
-function guardarLocalStorage(){
-  localStorage.setItem("keyLocalStorage", JSON.stringify(listadoProductos))
+function guardarLocalStorage() {
+  localStorage.setItem("keyLocalStorage", JSON.stringify(listadoProductos));
+}
+
+function crearFila(producto) {
+  let tablaProductos = document.getElementById("tablaProductos");
+  tablaProductos.innerHTML += ` <tr>
+  <td class="fw-bold">${producto.codigo}</td>
+  <td>${producto.producto}</td>
+  <td>${producto.descripcion}</td>
+  <td>${producto.cantidad}</td>
+  <td>${producto.url}</td>
+  <td>
+    <button class="btn btn-warning" type="submit">Editar</button
+    ><button class="btn btn-danger" type="submit">Borrar</button>
+  </td>
+</tr>`;
+}
+
+function cargaInicial() {
+  if (listadoProductos.length > 0) {
+    listadoProductos.forEach((itemObjeto) =>{
+      crearFila(itemObjeto)
+    });
+  }
 }
