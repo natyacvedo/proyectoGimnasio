@@ -1,4 +1,4 @@
-import { campoRequerido, validarNumeros, validarGeneral, validarContraseña } from './validaciones.js'
+import { campoRequerido, validarNumeros, validarGeneral, validarContraseña } from './validacionesRegistro.js'
 import { Usuario } from "./usuarioClass.js";
 
 //traigo el elemento que necesito del html
