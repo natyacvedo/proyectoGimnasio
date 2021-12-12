@@ -99,39 +99,42 @@
         <!-- Ventana Modal Registro -->
         <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content modalRegistro">
                     <button type="button" class="btn-close btn-danger botonSalida" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                     <img src="./img/logoV.png" alt="logo modal" class="logoModal">
                     <div class="modal-header">
-                        <h5 class="modal-title m-auto d-block" id="exampleModalLabel">Crea tu cuenta</h5>
+                        <h5 class="modal-title m-auto d-block text-light" id="exampleModalLabel">Crea tu cuenta</h5>
                     </div>
                     <div class="modal-body">
                         <form id='formUsuario'>
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
+                                <label for="nombre" class="form-label text-light">Nombre</label>
                                 <input type="text" class="form-control" id="nombre"
                                     placeholder="Ingresa tu nombre completo" />
-                                <div class="invalid-feedback">
+                                <div class="invalid-feedback text-light">
                                     Debe ingresar un codigo alfanumerico
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
+                                <label for="email" class="form-label text-light">Email</label>
                                 <input type="text" class="form-control" id="email"
                                     placeholder="Ingresa un email valido" />
                             </div>
                             <div class="mb-3">
-                                <label for="telefono" class="form-label">Telefono</label>
+                                <label for="telefono" class="form-label text-light">Telefono</label>
                                 <input type="number" class="form-control" id="telefono"
                                     placeholder="ingresa tu telefono" />
                             </div>
                             <div class="mb-3">
-                                <label for="contraseña" class="form-label">contraseña</label>
+                                <label for="contraseña" class="form-label text-light">contraseña</label>
                                 <input type="password" class="form-control" id="contraseña"
                                     placeholder="Ejemplo: contraseña123" />
                             </div>
-                            <button class="btn btn-primary" type="submit">Crear Cuenta</button>
+                            <button class="btn m-auto d-block my-4 rounded-pill btn-danger registroButton"
+                                type="submit">
+                                Crear Cuenta
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -151,8 +154,8 @@
                     <div class="modal-body">
                         <form>
                             <div class="mb-3 mx-3">
-                                <input type="number" class="form-control" id="numTelefono"
-                                    placeholder="Numero de telefono" aria-label="Numero de telefono">
+                                <input type="number" class="form-control" id="numTelefono" placeholder="Email"
+                                    aria-label="Email">
                             </div>
                             <div class="mb-3 mx-3">
                                 <input type="password" class="form-control" id="password" placeholder="Contraseña"

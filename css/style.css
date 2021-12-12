@@ -38,3 +38,7 @@ body{
   background-position: center;
 }
 
+.modalRegistro{
+  background-image: url(../img/modalRegistro.jpeg);
+  background-position: center;
+}
