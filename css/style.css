@@ -38,14 +38,14 @@ body{
   background-position: center;
 }
 
-.modalRegistro{
+/* .modalRegistro{
   background-image: url(../img/modalRegistro.jpeg);
   background-position: center;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
 
 *{
     font-family: 'Poppins', sans-serif;
-}
+} */
 
 .navfixed{
     position: fixed;
