@@ -96,7 +96,7 @@ function crearFila(producto) {
   <td>${producto.url}</td>
   <td>
     <button class="btn btn-warning" onclick= "prepararEdicionProducto(${producto.codigo})">Editar</button
-    ><button class="btn btn-danger" >Borrar</button>
+    ><button class="btn btn-danger" onclick= "borrarProducto(${producto.codigo})" >Borrar</button>
   </td>
 </tr>`;
 }
@@ -142,4 +142,14 @@ function modificarProducto(){
 function modificarTabla(){
   let tbodyProductos = document.querySelector("#tablaProductos");
   tbodyProductos.innerHTML = "";
+}
+
+window.borrarProducto = function(codigo){
+  
+  let arregloNuevo = listadoProductos.filter((item) => {return item.codigo != codigo})
+  listadoProductos = arregloNuevo;
+  guardarLocalStorage();
+  modificarTabla();
+  cargaInicial();
+  Swal.fire("Producto eliminado", "Su producto fue eliminado con éxito", "success");
 }
