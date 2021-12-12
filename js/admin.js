@@ -86,8 +86,8 @@ function crearFila(producto) {
   <td>${producto.cantidad}</td>
   <td>${producto.url}</td>
   <td>
-    <button class="btn btn-warning" type="submit">Editar</button
-    ><button class="btn btn-danger" type="submit">Borrar</button>
+    <button class="btn btn-warning" onclick= "prepararEdicionProducto()">Editar</button
+    ><button class="btn btn-danger" >Borrar</button>
   </td>
 </tr>`;
 }
@@ -98,4 +98,8 @@ function cargaInicial() {
       crearFila(itemObjeto)
     });
   }
+}
+
+window.prepararEdicionProducto = function(){
+  console.log("desde editar")
 }
