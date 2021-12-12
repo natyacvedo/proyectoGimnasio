@@ -18,6 +18,25 @@ let listadoProductos =
 let productoExistente = false;
 let botonNuevo = document.querySelector("#botonNuevo");
 
+let numero;
+
+let codigoAleatorio = () => {
+    numero = Math.floor(30 * Math.random()) +1
+    console.log(numero)
+    return numero;
+    
+}
+
+let nuevoNumero = () => {
+    codigoAleatorio();
+    while(listadoProductos.forEach(codigo => {
+      if (codigo.codigo === numero){
+        codigoAleatorio();
+      }
+    }))
+    return numero;
+}
+
 inputCodigo.addEventListener("blur", () => {
   campoObligatorio(inputCodigo);
 });
@@ -42,14 +61,14 @@ function guardarProducto(e) {
   e.preventDefault();
   if (
     validarFormulario(
-      inputCodigo,
+    
       inputProducto,
       inputDescripcion,
       inputCantidad,
       inputUrl
     )
   ) {
-    if (productoExistente == false) {
+    if (productoExistente === false) {
       crearProducto();
     } else {
       modificarProducto();
@@ -59,7 +78,7 @@ function guardarProducto(e) {
 
 function crearProducto() {
   let nuevoProducto = new NuevoProducto(
-    inputCodigo.value,
+    codigoAleatorio(),
     inputProducto.value,
     inputDescripcion.value,
     inputCantidad.value,
@@ -85,6 +104,8 @@ function limpiarFormulario() {
 function guardarLocalStorage() {
   localStorage.setItem("keyLocalStorage", JSON.stringify(listadoProductos));
 }
+
+
 
 function crearFila(producto) {
   let tablaProductos = document.getElementById("tablaProductos");
