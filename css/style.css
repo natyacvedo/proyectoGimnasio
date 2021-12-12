@@ -4,12 +4,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-background-color: rgb(253, 253, 253);
-
+.navfixed{
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    top: 0;
 }
 
 
+.mslider{
+    margin-top: 85px;
+}
 .colorFondo {
     background-color: #370247;
 }
