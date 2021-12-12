@@ -1,4 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+body{
+  background:black;
+}
+
+.registroButton{
+  width: 310px;
+  height:40px ;
+
+}
+  
+.letrasRegistro{
+    color: #a62b70 ;
+}
+
+
+
+.fontPruebaDos{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.logoV{
+  height: 150px;
+}
+
+.logoModal{
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+
+.botonSalida{
+  margin: 10px;
+  color: red;
+}
+
+.colorModal{
+  background-image: url(../img/imgModalDos.jpeg);
+  background-position: center;
+}
+
+.modalRegistro{
+  background-image: url(../img/modalRegistro.jpeg);
+  background-position: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
 *{
     font-family: 'Orbitron', sans-serif;
 }
