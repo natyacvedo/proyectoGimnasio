@@ -15,7 +15,7 @@
 <body>
       <main class="container" >
         <section class="my-5">
-          <h1 class="display-3 text-center">Administrador productos</h1>
+          <h1 class="display-3 text-center">Control de productos</h1>
           <hr />
           <form id="formProducto">
             <h3 class="mb-3 mt-5"><b>Cargar productos</b></h3>
@@ -25,8 +25,8 @@
               <input
                 type="number"
                 class="form-control"
-                id="codigo"
-                placeholder="Ingresar un codigo"               
+                id="codigo"                
+                              
               />            
             </div>
             <div class="mb-3">
@@ -81,14 +81,9 @@
         </div>
         </section>
         <section class="my-5">
-          <h2 class="display-3 text-center">Tabla de productos</h2>
+          <h2 class="display-3 text-center">Productos Cargados</h2>
           <hr />
-          <div>
-            <button class="btn btn-primary" type="submit">Nuevo</button>
-            <button class="btn btn-secondary" type="submit">
-              Cargar datos de prueba
-            </button>
-          </div>
+          
           <table class="table table-responsive mt-5">
             <thead>
               <tr class="fw-bold">
@@ -101,7 +96,8 @@
               </tr>
             </thead>
             <tbody id="tablaProductos">
-             
+             <hr>
+             <button class="btn btn-primary" id="botonNuevo" >Nuevo</button>
              
             </tbody>
           </table>
