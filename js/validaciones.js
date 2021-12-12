@@ -31,7 +31,7 @@ export function validarUrl(input) {
 }
 
 export function validarFormulario(
-  inputCodigo,
+  //inputCodigo,
   inputProducto,
   inputDescripcion,
   inputCantidad,
@@ -39,7 +39,7 @@ export function validarFormulario(
 ) {
   let alerta = document.querySelector("#msjAlerta");
   if (
-    campoObligatorio(inputCodigo) &&
+    //campoObligatorio(inputCodigo) &&
     campoObligatorio(inputProducto) &&
     campoObligatorio(inputDescripcion) &&
     validarNumeros(inputCantidad) &&

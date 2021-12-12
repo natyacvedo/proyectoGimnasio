@@ -9,12 +9,13 @@
     <meta name="keysword" content="js, crud" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Proyecto Gimnasio</title>
 </head>
 <body>
       <main class="container" >
         <section class="my-5">
-          <h1 class="display-3 text-center">Administrador productos</h1>
+          <h1 class="display-3 text-center">Control de productos</h1>
           <hr />
           <form id="formProducto">
             <h3 class="mb-3 mt-5"><b>Cargar productos</b></h3>
@@ -22,14 +23,11 @@
             <div class="mb-3">
               <label for="codigo" class="form-label">Codigo</label>
               <input
-                type="text"
+                type="number"
                 class="form-control"
-                id="codigo"
-                placeholder="Ingresar un codigo"               
-              />
-              <div class="invalid-feedback">
-               Debe ingresar un código numérico
-              </div>             
+                id="codigo"                
+                disabled            
+              />            
             </div>
             <div class="mb-3">
               <label for="producto" class="form-label">Producto</label>
@@ -38,6 +36,7 @@
                 class="form-control"
                 id="producto"
                 placeholder="Ej.Tobilleras"
+                maxlength="40"
               />
               <div class="invalid-feedback">
                 Debe ingresar un producto
@@ -45,10 +44,10 @@
             </div>
             <div class="mb-3">
               <label for="Descripcion" class="form-label">Descripcion</label>
-              <textarea id="descripcion" rows="3" class="form-control"></textarea>
+              <textarea id="descripcion" rows="3" class="form-control" maxlength="50" ></textarea>
               <div class="invalid-feedback">
                 Debe ingresar una descripción
-              </div>
+              </div>              
             </div>
             <div class="mb-3">
               <label for="cantidad" class="form-label">Cantidad</label>
@@ -57,6 +56,7 @@
                 class="form-control"
                 id="cantidad"
                 placeholder="ej: 5"
+                maxlength="4"
               />
               <div class="invalid-feedback">
                 Debe ingresar una cantidad menor a 1000
@@ -81,14 +81,9 @@
         </div>
         </section>
         <section class="my-5">
-          <h2 class="display-3 text-center">Tabla de productos</h2>
+          <h2 class="display-3 text-center">Productos Cargados</h2>
           <hr />
-          <div>
-            <button class="btn btn-primary" type="submit">Nuevo</button>
-            <button class="btn btn-secondary" type="submit">
-              Cargar datos de prueba
-            </button>
-          </div>
+          
           <table class="table table-responsive mt-5">
             <thead>
               <tr class="fw-bold">
@@ -100,22 +95,9 @@
                 <th>Acciones</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td class="fw-bold">001</td>
-                <td>Tobillera</td>
-                <td>
-                  Tobillera de 2.5kg
-                </td>
-                <td>1</td>
-                <td>
-                  https://m.media-amazon.com/images/I/51Mkr80aQqL.-AC-SL1092-.jpg
-                </td>
-                <td>
-                  <button class="btn btn-warning" type="submit">Editar</button
-                  ><button class="btn btn-danger" type="submit">Borrar</button>
-                </td>
-              </tr>
+            <tbody id="tablaProductos">
+             <hr>
+             <button class="btn btn-primary" id="botonNuevo" >Nuevo</button>
              
             </tbody>
           </table>
