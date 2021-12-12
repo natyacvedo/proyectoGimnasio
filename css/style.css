@@ -11,6 +11,7 @@
     top: 0;
 }
 
+
 .mslider{
     margin-top: 85px;
 }
@@ -58,14 +59,7 @@
     border-radius: 5px;
 }
 
-.alink{
-    text-decoration: none;
-    color: black;
-    }
-.tiempo{
-    line-height: 30px;;
-    font-size: 15px;
-}
+
 
 .titleAbout{
     margin-top: 80px;
@@ -79,6 +73,7 @@
     border-radius: 50%;
     border:2px solid #023047 ;
     width: 50%;
+    object-fit: fill;
     
 }
 
@@ -95,12 +90,7 @@
 
 
 
-
 @media all and (max-width: 576px){
-    .imgSlider{
-        height: 220px;
-        object-fit: cover;
-    }
 
     .imgNone{
         display: none;
@@ -113,10 +103,5 @@
     .logoResponsive{
         text-align: center;
     }
-
-    .marginBusquedaIndexResponsive{
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-       
+ 
 }
