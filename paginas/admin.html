@@ -13,10 +13,54 @@
     <title>Proyecto Gimnasio</title>
 </head>
 <body>
-      <main class="container" >
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navfixed">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../img/LogoV.png" alt="Logo del Navbar "width="80px">   
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 ">
+            <li class="nav-item">
+              <a class="text-white nav-link" href="login.html">Login</a>
+            </li> 
+            <li class="nav-item">
+              <a class="text-white nav-link" aria-current="page" href="admin.html">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-white nav-link" href="quienesSomos.html">Quienes Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-white nav-link" href="../registro.html">Registro</a>
+            </li>
+            <li class="nav-item">
+              <form class="d-flex">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+      <main class="container py-5 my-5 titulosColor">
         <section class="my-5">
           <h1 class="display-3 text-center">Control de productos</h1>
-          <hr />
+          <hr/>
           <form id="formProducto">
             <h3 class="mb-3 mt-5"><b>Cargar productos</b></h3>
             <hr />
@@ -26,8 +70,7 @@
                 type="number"
                 class="form-control"
                 id="codigo"                
-                disabled            
-              />            
+                disabled/>            
             </div>
             <div class="mb-3">
               <label for="producto" class="form-label">Producto</label>
@@ -36,8 +79,7 @@
                 class="form-control"
                 id="producto"
                 placeholder="Ej.Tobilleras"
-                maxlength="40"
-              />
+                maxlength="40"/>
               <div class="invalid-feedback">
                 Debe ingresar un producto
               </div>
@@ -56,8 +98,7 @@
                 class="form-control"
                 id="cantidad"
                 placeholder="ej: 5"
-                maxlength="4"
-              />
+                maxlength="4"/>
               <div class="invalid-feedback">
                 Debe ingresar una cantidad menor a 1000
               </div>
@@ -68,8 +109,7 @@
                 type="text"
                 class="form-control"
                 id="url"
-                placeholder="http://127.0.0.1:5500/img.jpg"
-              />
+                placeholder="http://127.0.0.1:5500/img.jpg"/>
               <div class="invalid-feedback">
                 Debe ingresar una URL
               </div>
@@ -82,26 +122,97 @@
         </section>
         <section class="my-5">
           <h2 class="display-3 text-center">Productos Cargados</h2>
-          <hr />
-          
+          <hr/>
           <table class="table table-responsive mt-5">
             <thead>
-              <tr class="fw-bold">
+              <tr class="fw-bold titulosColor">
                 <th>Cod.</th>
                 <th>Producto</th>
                 <th>Descripcion</th>
                 <th>Cantidad</th>
-                <th>Url</th>
+                <!--<th>Url</th>-->
                 <th>Acciones</th>
               </tr>
             </thead>
             <tbody id="tablaProductos">
              <hr>
-             <button class="btn btn-primary" id="botonNuevo" >Nuevo</button>
-             
+             <button class="btn btn-primary" id="botonNuevo" >Nuevo</button> 
             </tbody>
           </table>
         </section>
+        </main>
+        <footer class="bg-dark py-4 text-light">
+          <section class="container">
+            <article class="row">
+              <div class="col-sm-12 col-md-4 col-lg-3 my-2 text-center">
+                <img src="../img/LogoV.png" alt="Logo de Gimnasio" width="200" />
+              </div>
+              <div class="col-sm-12 col-md-4 col-lg-3 my-2 text-center">
+                <h5>Contacto</h5>
+                <div class="text-secondary">
+                  <p>3813426862</p>
+                  <p>tiendavictorius@gmail.com</p>
+                  <p>No es un local a la calle</p>
+                </div>
+              </div>
+              <div class="col-md footer-payments-shipping-logos text-center col-sm-12 col-md-4 col-lg-3 my-2">
+                <h5>Medios de pago</h5>
+                <div class="mb-5">
+                  <img src="../img/visa.png"
+                    data-src=""
+                    class="icon-logo lazyloaded" alt="visa" width="32" height="20" />
+                  <img
+                    src="../img/mastercard.png"
+                    data-src=""
+                    class="icon-logo lazyloaded" alt="mastercard" width="32" height="20" />
+                  <img src="../img/cabal.png"
+                    data-src=""
+                    class="icon-logo lazyloaded" alt="ar_cabal" width="32" height="20" />
+                  <img
+                    src="../img/naranja.png"
+                    data-src=""
+                    class="icon-logo lazyloaded" alt="ar_tarjeta-naranja" width="32" height="20" />
+                  <img
+                    src="../img/mercadopago.png"
+                    data-src=""
+                    class="icon-logo lazyloaded" alt="mercadopago" width="32" height="20" />
+                  <img src="../img/nativa.png"
+                    data-src=""
+                    class="icon-logo lazyloaded" alt="nativa" width="32" height="20" />
+                  <img
+                    src="../img/pagofacil.png"
+                    data-src=""
+                    class="icon-logo lazyloaded" alt="pagofacil" width="32" height="20" />
+                  <img src="../img/rapipago.png"
+                    data-src=""
+                    class="icon-logo lazyloaded" alt="rapipago" width="32" height="20" />
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 col-lg-3 my-2">
+                <div class="text-center">
+                  <h5>Seguinos en redes</h5>
+                  <div class="centrar">
+                    <a href="https://fontawesome.com/v5.15/icons/twitter-square?style=brands" target="_blank"
+                      class="text-secondary mx-2">
+                      <i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a href="https://fontawesome.com/v5.15/icons/twitter-square?style=brands" target="_blank"
+                      class="text-secondary mx-2">
+                      <i class="fab fa-instagram-square fa-2x"></i></a>
+                    <a href="https://fontawesome.com/v5.15/icons/twitter-square?style=brands" target="_blank"
+                      class="text-secondary mx-2">
+                      <i class="fab fa-twitter-square fa-2x"></i></a>
+                  </div>
+                </div>
+            </article>
+          </section>
+          <div class="text-center">
+            &copy; Todos los derechos reservados
+            <p>Defensa de las y los consumidores. Para reclamos
+              <a class="font-weight-bold" href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario"
+                target="_blank"> ingrese aquí</a></p>
+          </div>
+          </div>
+        </footer>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/admin.js" type="module"></script>
 </body>
