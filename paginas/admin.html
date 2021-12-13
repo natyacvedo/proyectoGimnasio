@@ -124,6 +124,7 @@
         <section class="my-5">
           <h2 class="display-3 text-center titulosColor">Productos Cargados</h2>
           <hr/> 
+          <div class="table-responsive">
           <table class="tabla table mt-5 titulosColor">
             <thead>
               <tr class="fw-bold text-center">
@@ -140,7 +141,26 @@
              <button class="btn colorSuscripcion" id="botonNuevo" >Nuevo</button> 
             </tbody>
           </table>
+        </div>
         </section>
+        <section>
+          <h2 class="display-3 text-center">Tabla de usuarios</h2>
+          <hr>
+          <div class="table-responsive">
+              <table class="table my-5">
+                  <thead>
+                      <tr>
+                          <th>nombre</th>
+                          <th>email</th>
+                          <th>telefono</th>
+                          <th>contraseña</th>
+                      </tr>
+                  </thead>
+                  <tbody id="tablaUsuarios">
+                  </tbody>
+              </table>
+          </div>
+      </section>
         </main>
         <footer class="bg-dark py-4 text-light">
           <section class="container">
@@ -216,5 +236,6 @@
         </footer>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/admin.js" type="module"></script>
+        <script src="./js/registro.js" type="module"></script>
 </body>
 </html>
