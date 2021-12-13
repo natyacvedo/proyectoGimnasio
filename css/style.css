@@ -40,7 +40,7 @@ body{
   background-position: center;
 }
 
-/* .modalRegistro{
+.modalRegistro{
   background-image: url(../img/modalRegistro.jpeg);
   background-position: center;
 }
@@ -68,7 +68,7 @@ body{
 }
 
 .colorSuscripcion {
-    background-color: #bc21bc;
+    background-color: #a62b70;
 }
 
 .imgCircular {
@@ -154,5 +154,5 @@ body{
 }
 
 .titulosColor{
-    color: whitesmoke;
+    color: rgb(207, 202, 202);
 }
