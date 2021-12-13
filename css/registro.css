@@ -151,3 +151,49 @@ body{
     color: rgb(207, 202, 202);
 }
 
+.registroFont{
+    font-size: small;
+}
+
+@media all and (max-width: 640px){
+
+.tiaclair{
+    display: none;
+}
+.logoV{
+    display: block;
+    margin: auto;
+}
+.crearCuenta{
+    width: 120px;
+    height: 60px;
+}
+}
+ 
+
+
+@media all and (max-width: 1024px){
+
+    .tiaclair{
+        display: none;
+    }
+    .logoV {
+        width: 205px;
+        height: 100%;
+    }
+     
+}
+
+.links{
+    text-decoration: none;
+    color: white;
+}
+
+@media all and (min-width: 1026px){
+
+    .logoV {
+        width: 205px;
+        height: 100%;
+    }
+     
+}
