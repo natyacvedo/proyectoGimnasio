@@ -164,8 +164,13 @@ body{
     display: block;
     margin: auto;
 }
- 
+.crearCuenta{
+    width: 120px;
+    height: 60px;
 }
+}
+ 
+
 
 @media all and (max-width: 1024px){
 
