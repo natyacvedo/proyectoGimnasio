@@ -5,19 +5,17 @@ let campoNombre = document.querySelector('#nombre');
 let campoEmail = document.querySelector('#email');
 let campoTelefono = document.querySelector('#telefono');
 let campoContraseña = document.querySelector('#contraseña');
-let campoURL = document.querySelector('#url');
 let formularioUsuario = document.querySelector('#formUsuario');
 
 let listaUsuarios = JSON.parse(localStorage.getItem('arregloUsuariosKey')) || [];
 let usuarioExistente = false; // si usuarioExistente es false quiero crear, si es true quiero modificar un producto existe.
-let btnNuevo = document.querySelector("#btnNuevo")
 
 campoNombre.addEventListener('blur', () => { campoRequerido(campoNombre) });
 campoEmail.addEventListener('blur', () => { campoRequerido(campoEmail) });
 campoTelefono.addEventListener('blur', () => { validarNumeros(campoTelefono) });
 campoContraseña.addEventListener('blur', () => { validarContraseña(campoContraseña) });
 formularioUsuario.addEventListener('submit', guardarUsuario);
-btnNuevo.addEventListener("click", limpiarFormulario);
+
 
 cargaInicial();
 
@@ -62,24 +60,21 @@ function crearFila(usuario) {
     <td>${usuario.telefono}</td>
     <td>${usuario.contraseña}</td>
     <td>
-    <button class="btn btn-warning" onclick="prepararEdicionUsuario('${usuario.nombre}')">Editar</button>
-      <button class="btn btn-danger" onclick="borrarUsuario(${usuario.telefono})">Borrar</button>
+    <button class="btn btn-danger" onclick="borrarUsuario(${usuario.telefono})">Borrar</button>
     </td>
   </tr>`;
 }
 
+
 function cargaInicial() {
     if (listaUsuarios.length > 0) {
-        //crear las filas
         listaUsuarios.forEach((itemUsuario) => { crearFila(itemUsuario) });
     }
 }
 
 function modificarUsuario() {
-    console.log('desde modificar usuario');
     let posicionObjetoBuscado = listaUsuarios.findIndex((itemUsuario) => { return itemUsuario.nombre == itemUsuario.nombre });
-    console.log(posicionObjetoBuscado);
-    listaUsuarios[posicionObjetoBuscado].nombre = campoNombre.value;
+    // listaUsuarios[posicionObjetoBuscado].nombre = campoNombre.value;
     listaUsuarios[posicionObjetoBuscado].email = campoEmail.value;
     listaUsuarios[posicionObjetoBuscado].telefono = campoTelefono.value;
     listaUsuarios[posicionObjetoBuscado].contraseña = campoContraseña.value;
@@ -94,6 +89,7 @@ function borrarTabla() {
     tbodyUsuarios.innerHTML = " ";
 }
 
+
 window.borrarUsuario = function (telefono) {
     let arregloNuevo = listaUsuarios.filter((item) => { return item.telefono != telefono });
     console.log(arregloNuevo);
@@ -101,16 +97,4 @@ window.borrarUsuario = function (telefono) {
     guardarLocalStorage();
     borrarTabla();
     cargaInicial();
-}
-
-window.prepararEdicionUsuario = function (nombre) {
-    console.log("desde editar");
-    console.log(nombre);
-    let usuarioBuscado = listaUsuarios.find((itemUsuario) => { return itemUsuario.nombre == nombre });
-    console.log(usuarioBuscado);
-    campoNombre.value = usuarioBuscado.nombre;
-    campoEmail.value = usuarioBuscado.email;
-    campoTelefono.value = usuarioBuscado.telefono;
-    campoContraseña.value = usuarioBuscado.contraseña;
-    usuarioExistente = true;
 }

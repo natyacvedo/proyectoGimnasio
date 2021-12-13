@@ -21,19 +21,19 @@ let botonNuevo = document.querySelector("#botonNuevo");
 let numero;
 
 let codigoAleatorio = () => {
-    numero = Math.floor(30 * Math.random()) +1
-    console.log(numero)
-    return numero;
-    
+  numero = Math.floor(30 * Math.random()) + 1
+  console.log(numero)
+  return numero;
+
 }
 
 let nuevoNumero = () => {
-    codigoAleatorio();
-    while(listadoProductos.forEach(codigo => {
-      if (codigo.codigo === numero){
-        codigoAleatorio();
-      }
-    }))
+  codigoAleatorio();
+  while (listadoProductos.forEach(codigo => {
+    if (codigo.codigo === numero) {
+      codigoAleatorio();
+    }
+  }))
     return numero;
 }
 
@@ -61,7 +61,7 @@ function guardarProducto(e) {
   e.preventDefault();
   if (
     validarFormulario(
-    
+
       inputProducto,
       inputDescripcion,
       inputCantidad,
@@ -109,8 +109,8 @@ function guardarLocalStorage() {
 
 function crearFila(producto) {
   let tablaProductos = document.getElementById("tablaProductos");
-  tablaProductos.innerHTML += 
-`<tr class="text-center">
+  tablaProductos.innerHTML +=
+    `<tr class="text-center">
   <td class="fw-bold">${producto.codigo}</td>
   <td>${producto.producto}</td>
   <td>${producto.descripcion}</td>
@@ -145,9 +145,9 @@ window.prepararEdicionProducto = function (codigo) {
   productoExistente = true;
 };
 
-function modificarProducto(){
+function modificarProducto() {
   console.log("modificar producto");
-  let posicionProducto = listadoProductos.findIndex((itemProducto) =>{return itemProducto.codigo == inputCodigo.value})
+  let posicionProducto = listadoProductos.findIndex((itemProducto) => { return itemProducto.codigo == inputCodigo.value })
   console.log(posicionProducto)
   listadoProductos[posicionProducto].producto = inputProducto.value;
   listadoProductos[posicionProducto].descripcion = inputDescripcion.value;
@@ -160,14 +160,14 @@ function modificarProducto(){
   limpiarFormulario();
 }
 
-function modificarTabla(){
+function modificarTabla() {
   let tbodyProductos = document.querySelector("#tablaProductos");
   tbodyProductos.innerHTML = "";
 }
 
-window.borrarProducto = function(codigo){
-  
-  let arregloNuevo = listadoProductos.filter((item) => {return item.codigo != codigo})
+window.borrarProducto = function (codigo) {
+
+  let arregloNuevo = listadoProductos.filter((item) => { return item.codigo != codigo })
   listadoProductos = arregloNuevo;
   guardarLocalStorage();
   modificarTabla();

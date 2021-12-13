@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Naty Acevedo" />
-    <meta name="description" content="tienda fitness" />
-    <meta name="keysword" content="js, crud" />
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/admin.css">
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Proyecto Gimnasio</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Naty Acevedo" />
+  <meta name="description" content="tienda fitness" />
+  <meta name="keysword" content="js, crud" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Proyecto Gimnasio</title>
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navfixed">
       <div class="container">
         <a class="navbar-brand" href="../index.html">
-            <img src="../img/LogoV.png" alt="Logo del Navbar "width="80px">   
+          <img src="../img/LogoV.png" alt="Logo del Navbar " width="80px">
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 ">
             <li class="nav-item">
-              <a class="text-white nav-link" href="login.html">Login</a>
-            </li> 
+              <a class="text-white nav-link" href="../registro.html">Logout</a>
+            </li>
             <li class="nav-item">
               <a class="text-white nav-link" aria-current="page" href="admin.html">Admin</a>
             </li>
@@ -58,184 +54,149 @@
       </div>
     </nav>
   </header>
-      <main class="container py-5 my-5 titulosColor">
-        <section class="my-5">
-          <h1 class="display-3 text-center">Control de productos</h1>
-          <hr/>
-          <form id="formProducto">
-            <h3 class="mb-3 mt-5"><b>Cargar productos</b></h3>
-            <hr />
-            <div class="mb-3">
-              <label for="codigo" class="form-label">Codigo</label>
-              <input
-                type="number"
-                class="form-control"
-                id="codigo"                
-                disabled/>            
-            </div>
-            <div class="mb-3">
-              <label for="producto" class="form-label">Producto</label>
-              <input
-                type="text"
-                class="form-control"
-                id="producto"
-                placeholder="Ej.Tobilleras"
-                maxlength="40"/>
-              <div class="invalid-feedback">
-                Debe ingresar un producto
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="Descripcion" class="form-label">Descripcion</label>
-              <textarea id="descripcion" rows="3" class="form-control" maxlength="50" ></textarea>
-              <div class="invalid-feedback">
-                Debe ingresar una descripción
-              </div>              
-            </div>
-            <div class="mb-3">
-              <label for="cantidad" class="form-label">Cantidad</label>
-              <input
-                type="text"
-                class="form-control"
-                id="cantidad"
-                placeholder="ej: 5"
-                maxlength="4"/>
-              <div class="invalid-feedback">
-                Debe ingresar una cantidad menor a 1000
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="url" class="form-label">URL</label>
-              <input
-                type="text"
-                class="form-control"
-                id="url"
-                placeholder="http://127.0.0.1:5500/img.jpg"/>
-              <div class="invalid-feedback">
-                Debe ingresar una URL
-              </div>
-            </div>
-            <button class="btn colorSuscripcion" type="submit">Guardar</button>                   
-        </form>
-        <div class="alert alert-danger my-5 d-none" role="alert" id="msjAlerta">
-          Completar todos los campos
+  <main class="container py-5 my-5 titulosColor">
+    <section class="my-5">
+      <h1 class="display-3 text-center">Control de productos</h1>
+      <hr />
+      <form id="formProducto">
+        <h3 class="mb-3 mt-5"><b>Cargar productos</b></h3>
+        <hr />
+        <div class="mb-3">
+          <label for="codigo" class="form-label">Codigo</label>
+          <input type="number" class="form-control" id="codigo" disabled />
         </div>
-        </section>
-        <section class="my-5">
-          <h2 class="display-3 text-center titulosColor">Productos Cargados</h2>
-          <hr/> 
-          <div class="table-responsive">
-          <table class="tabla table mt-5 titulosColor">
-            <thead>
-              <tr class="fw-bold text-center">
-                <th>Cod.</th>
-                <th>Producto</th>
-                <th>Descripcion</th>
-                <th>Cantidad</th>
-                <!-- <th>Url</th> -->
-                <th scope="col">Acciones</th>
-              </tr>
-            </thead>
-            <tbody id="tablaProductos">
-             <hr>
-             <button class="btn colorSuscripcion" id="botonNuevo" >Nuevo</button> 
-            </tbody>
-          </table>
-        </div>
-        </section>
-        <section>
-          <h2 class="display-3 text-center">Tabla de usuarios</h2>
-          <hr>
-          <div class="table-responsive">
-              <table class="table my-5">
-                  <thead>
-                      <tr>
-                          <th>nombre</th>
-                          <th>email</th>
-                          <th>telefono</th>
-                          <th>contraseña</th>
-                      </tr>
-                  </thead>
-                  <tbody id="tablaUsuarios">
-                  </tbody>
-              </table>
+        <div class="mb-3">
+          <label for="producto" class="form-label">Producto</label>
+          <input type="text" class="form-control" id="producto" placeholder="Ej.Tobilleras" maxlength="40" />
+          <div class="invalid-feedback">
+            Debe ingresar un producto
           </div>
-      </section>
-        </main>
-        <footer class="bg-dark py-4 text-light">
-          <section class="container">
-            <article class="row">
-              <div class="col-sm-12 col-md-4 col-lg-3 my-2 text-center">
-                <img src="../img/LogoV.png" alt="Logo de Gimnasio" width="200" />
-              </div>
-              <div class="col-sm-12 col-md-4 col-lg-3 my-2 text-center">
-                <h5>Contacto</h5>
-                <div class="text-secondary">
-                  <p>3813426862</p>
-                  <p>tiendavictorius@gmail.com</p>
-                  <p>No es un local a la calle</p>
-                </div>
-              </div>
-              <div class="col-md footer-payments-shipping-logos text-center col-sm-12 col-md-4 col-lg-3 my-2">
-                <h5>Medios de pago</h5>
-                <div class="mb-5">
-                  <img src="../img/visa.png"
-                    data-src=""
-                    class="icon-logo lazyloaded" alt="visa" width="32" height="20" />
-                  <img
-                    src="../img/mastercard.png"
-                    data-src=""
-                    class="icon-logo lazyloaded" alt="mastercard" width="32" height="20" />
-                  <img src="../img/cabal.png"
-                    data-src=""
-                    class="icon-logo lazyloaded" alt="ar_cabal" width="32" height="20" />
-                  <img
-                    src="../img/naranja.png"
-                    data-src=""
-                    class="icon-logo lazyloaded" alt="ar_tarjeta-naranja" width="32" height="20" />
-                  <img
-                    src="../img/mercadopago.png"
-                    data-src=""
-                    class="icon-logo lazyloaded" alt="mercadopago" width="32" height="20" />
-                  <img src="../img/nativa.png"
-                    data-src=""
-                    class="icon-logo lazyloaded" alt="nativa" width="32" height="20" />
-                  <img
-                    src="../img/pagofacil.png"
-                    data-src=""
-                    class="icon-logo lazyloaded" alt="pagofacil" width="32" height="20" />
-                  <img src="../img/rapipago.png"
-                    data-src=""
-                    class="icon-logo lazyloaded" alt="rapipago" width="32" height="20" />
-                </div>
-              </div>
-              <div class="col-sm-12 col-md-4 col-lg-3 my-2">
-                <div class="text-center">
-                  <h5>Seguinos en redes</h5>
-                  <div class="centrar">
-                    <a href="https://www.facebook.com/" target="_blank"
-                class="text-secondary mx-2">
-                <i class="fab fa-facebook-square fa-2x"></i></a>
-              <a href="https://www.instagram.com/" target="_blank"
-                class="text-secondary mx-2">
-                <i class="fab fa-instagram-square fa-2x"></i></a>
-              <a href="https://twitter.com/?lang=es" target="_blank"
-                class="text-secondary mx-2">
-                <i class="fab fa-twitter-square fa-2x"></i></a>
-                  </div>
-                </div>
-            </article>
-          </section>
+        </div>
+        <div class="mb-3">
+          <label for="Descripcion" class="form-label">Descripcion</label>
+          <textarea id="descripcion" rows="3" class="form-control" maxlength="50"></textarea>
+          <div class="invalid-feedback">
+            Debe ingresar una descripción
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="cantidad" class="form-label">Cantidad</label>
+          <input type="text" class="form-control" id="cantidad" placeholder="ej: 5" maxlength="4" />
+          <div class="invalid-feedback">
+            Debe ingresar una cantidad menor a 1000
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="url" class="form-label">URL</label>
+          <input type="text" class="form-control" id="url" placeholder="http://127.0.0.1:5500/img.jpg" />
+          <div class="invalid-feedback">
+            Debe ingresar una URL
+          </div>
+        </div>
+        <button class="btn colorSuscripcion" type="submit">Guardar</button>
+      </form>
+      <div class="alert alert-danger my-5 d-none" role="alert" id="msjAlerta">
+        Completar todos los campos
+      </div>
+    </section>
+    <section class="my-5">
+      <h2 class="display-3 text-center titulosColor">Productos Cargados</h2>
+      <div class="table-responsive">
+        <table class="tabla table mt-5 titulosColor">
+          <thead>
+            <tr class="fw-bold text-center">
+              <th>Cod.</th>
+              <th>Producto</th>
+              <th>Descripcion</th>
+              <th>Cantidad</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaProductos">
+            <hr>
+            <button class="btn colorSuscripcion" id="botonNuevo">Nuevo</button>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="my-5">
+      <h2 class="display-3 text-center titulosColor">Tabla de usuarios</h2>
+      <hr>
+      <div class="table-responsive">
+        <table class="tabla table mt-5 titulosColor">
+          <thead>
+            <tr class="fw-bold text-center">
+              <th>nombre</th>
+              <th>email</th>
+              <th>telefono</th>
+              <th>contraseña</th>
+            </tr>
+          </thead>
+          <tbody id="tablaUsuarios">
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-dark py-4 text-light">
+    <section class="container">
+      <article class="row">
+        <div class="col-sm-12 col-md-4 col-lg-3 my-2 text-center">
+          <img src="../img/LogoV.png" alt="Logo de Gimnasio" width="200" />
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-3 my-2 text-center">
+          <h5>Contacto</h5>
+          <div class="text-secondary">
+            <p>3813426862</p>
+            <p>tiendavictorius@gmail.com</p>
+            <p>No es un local a la calle</p>
+          </div>
+        </div>
+        <div class="col-md footer-payments-shipping-logos text-center col-sm-12 col-md-4 col-lg-3 my-2">
+          <h5>Medios de pago</h5>
+          <div class="mb-5">
+            <img src="../img/visa.png" data-src="" class="icon-logo lazyloaded" alt="visa" width="32" height="20" />
+            <img src="../img/mastercard.png" data-src="" class="icon-logo lazyloaded" alt="mastercard" width="32"
+              height="20" />
+            <img src="../img/cabal.png" data-src="" class="icon-logo lazyloaded" alt="ar_cabal" width="32"
+              height="20" />
+            <img src="../img/naranja.png" data-src="" class="icon-logo lazyloaded" alt="ar_tarjeta-naranja" width="32"
+              height="20" />
+            <img src="../img/mercadopago.png" data-src="" class="icon-logo lazyloaded" alt="mercadopago" width="32"
+              height="20" />
+            <img src="../img/nativa.png" data-src="" class="icon-logo lazyloaded" alt="nativa" width="32" height="20" />
+            <img src="../img/pagofacil.png" data-src="" class="icon-logo lazyloaded" alt="pagofacil" width="32"
+              height="20" />
+            <img src="../img/rapipago.png" data-src="" class="icon-logo lazyloaded" alt="rapipago" width="32"
+              height="20" />
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-3 my-2">
           <div class="text-center">
-            &copy; Todos los derechos reservados
-            <p>Defensa de las y los consumidores. Para reclamos
-              <a class="font-weight-bold" href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario"
-                target="_blank"> ingrese aquí</a></p>
+            <h5>Seguinos en redes</h5>
+            <div class="centrar">
+              <a href="https://www.facebook.com/" target="_blank" class="text-secondary mx-2">
+                <i class="fab fa-facebook-square fa-2x"></i></a>
+              <a href="https://www.instagram.com/" target="_blank" class="text-secondary mx-2">
+                <i class="fab fa-instagram-square fa-2x"></i></a>
+              <a href="https://twitter.com/?lang=es" target="_blank" class="text-secondary mx-2">
+                <i class="fab fa-twitter-square fa-2x"></i></a>
+            </div>
           </div>
-          </div>
-        </footer>
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/admin.js" type="module"></script>
-        <script src="./js/registro.js" type="module"></script>
+      </article>
+    </section>
+    <div class="text-center">
+      &copy; Todos los derechos reservados
+      <p>Defensa de las y los consumidores. Para reclamos
+        <a class="font-weight-bold" href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario"
+          target="_blank"> ingrese aquí</a>
+      </p>
+    </div>
+    </div>
+  </footer>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/admin.js" type="module"></script>
+  <script src="/js/registro.js" type="module"></script>
 </body>
+
 </html>
