@@ -109,15 +109,15 @@ function guardarLocalStorage() {
 
 function crearFila(producto) {
   let tablaProductos = document.getElementById("tablaProductos");
-  tablaProductos.innerHTML += ` <tr>
+  tablaProductos.innerHTML += 
+`<tr class="text-center">
   <td class="fw-bold">${producto.codigo}</td>
   <td>${producto.producto}</td>
   <td>${producto.descripcion}</td>
-  <td>${producto.cantidad}</td>
-  <td>${producto.url}</td>
-  <td>
+  <td>${producto.cantidad}</td> 
+  <td class="text-center">
     <button class="btn btn-warning" onclick= "prepararEdicionProducto(${producto.codigo})">Editar</button
-    ><button class="btn btn-danger" onclick= "borrarProducto(${producto.codigo})" >Borrar</button>
+    ><button class="btn btn-danger mx-3" onclick= "borrarProducto(${producto.codigo})" >Borrar</button>
   </td>
 </tr>`;
 }
