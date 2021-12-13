@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
 body{
   background:black;
 }
@@ -41,11 +43,11 @@ body{
 /* .modalRegistro{
   background-image: url(../img/modalRegistro.jpeg);
   background-position: center;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+}
 
 *{
-    font-family: 'Poppins', sans-serif;
-} */
+    font-family: 'Orbitron', sans-serif;
+}
 
 .navfixed{
     position: fixed;
@@ -53,7 +55,6 @@ body{
     width: 100%;
     top: 0;
 }
-
 
 .mslider{
     margin-top: 85px;
@@ -114,17 +115,16 @@ body{
 
 .imgCircular {
     border-radius: 50%;
-    border:2px solid #023047 ;
+    border:2px solid #f5f5f5 ;
     width: 50%;
     object-fit: fill;
     
 }
 
 .colorRaya {
-    background-color:#023047 ;
+    background-color:#f5f5f5 ;
     
 }
-
 .marginBotonesNav{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -147,4 +147,12 @@ body{
         text-align: center;
     }
  
+}
+
+.colorbg{
+    background-color: rgb(0, 0, 0);
+}
+
+.titulosColor{
+    color: whitesmoke;
 }
