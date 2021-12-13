@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Naty Acevedo" />
+    <meta name="description" content="tienda fitness" />
+    <meta name="keysword" content="js, crud" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Proyecto Gimnasio</title>
+</head>
+<body>
+      <main class="container">
+        <section class="my-5">
+          <h1 class="display-3 text-center">Control de productos</h1>
+          <hr />
+          <form id="formProducto">
+            <h3 class="mb-3 mt-5"><b>Cargar productos</b></h3>
+            <hr />
+            <div class="mb-3">
+              <label for="codigo" class="form-label">Codigo</label>
+              <input
+                type="number"
+                class="form-control"
+                id="codigo"                
+                disabled            
+              />            
+            </div>
+            <div class="mb-3">
+              <label for="producto" class="form-label">Producto</label>
+              <input
+                type="text"
+                class="form-control"
+                id="producto"
+                placeholder="Ej.Tobilleras"
+                maxlength="40"
+              />
+              <div class="invalid-feedback">
+                Debe ingresar un producto
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="Descripcion" class="form-label">Descripcion</label>
+              <textarea id="descripcion" rows="3" class="form-control" maxlength="50" ></textarea>
+              <div class="invalid-feedback">
+                Debe ingresar una descripción
+              </div>              
+            </div>
+            <div class="mb-3">
+              <label for="cantidad" class="form-label">Cantidad</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cantidad"
+                placeholder="ej: 5"
+                maxlength="4"
+              />
+              <div class="invalid-feedback">
+                Debe ingresar una cantidad menor a 1000
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="url" class="form-label">URL</label>
+              <input
+                type="text"
+                class="form-control"
+                id="url"
+                placeholder="http://127.0.0.1:5500/img.jpg"
+              />
+              <div class="invalid-feedback">
+                Debe ingresar una URL
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Guardar</button>                   
+        </form>
+        <div class="alert alert-danger my-5 d-none" role="alert" id="msjAlerta">
+          Completar todos los campos
+        </div>
+        </section>
+        <section class="my-5">
+          <h2 class="display-3 text-center">Productos Cargados</h2>
+          <hr />
+          <table class="table table-responsive mt-5">
+            <thead>
+              <tr class="fw-bold text-center">
+                <th>Cod.</th>
+                <th>Producto</th>
+                <th>Descripcion</th>
+                <th>Cantidad</th>
+                <!-- <th>Url</th> -->
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tablaProductos">
+             <hr>
+             <button class="btn btn-primary" id="botonNuevo" >Nuevo</button>
+             
+            </tbody>
+          </table>
+        </section>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/admin.js" type="module"></script>
+</body>
+</html>

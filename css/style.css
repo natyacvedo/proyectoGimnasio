@@ -1,10 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
-*{
-    font-family: 'Poppins', sans-serif;
+body{
+  background:black;
+}
+
+.registroButton{
+  width: 310px;
+  height:40px ;
+
+}
+  
+.letrasRegistro{
+    color: #a62b70 ;
 }
 
 
+
+.fontPruebaDos{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.logoV{
+  height: 150px;
+}
+
+.logoModal{
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+
+.botonSalida{
+  margin: 10px;
+  color: red;
+}
+
+.colorModal{
+  background-image: url(../img/imgModalDos.jpeg);
+  background-position: center;
+}
+
+/* .modalRegistro{
+  background-image: url(../img/modalRegistro.jpeg);
+  background-position: center;
+}
+
+*{
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navfixed{
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    top: 0;
+}
+
+.mslider{
+    margin-top: 85px;
+}
 .colorFondo {
     background-color: #370247;
 }
@@ -49,14 +103,7 @@
     border-radius: 5px;
 }
 
-.alink{
-    text-decoration: none;
-    color: black;
-    }
-.tiempo{
-    line-height: 30px;;
-    font-size: 15px;
-}
+
 
 .titleAbout{
     margin-top: 80px;
@@ -68,16 +115,16 @@
 
 .imgCircular {
     border-radius: 50%;
-    border:2px solid #023047 ;
+    border:2px solid #f5f5f5 ;
     width: 50%;
+    object-fit: fill;
     
 }
 
 .colorRaya {
-    background-color:#023047 ;
+    background-color:#f5f5f5 ;
     
 }
-
 .marginBotonesNav{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -86,12 +133,7 @@
 
 
 
-
 @media all and (max-width: 576px){
-    .imgSlider{
-        height: 220px;
-        object-fit: cover;
-    }
 
     .imgNone{
         display: none;
@@ -104,10 +146,13 @@
     .logoResponsive{
         text-align: center;
     }
+ 
+}
 
-    .marginBusquedaIndexResponsive{
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-       
+.colorbg{
+    background-color: rgb(0, 0, 0);
+}
+
+.titulosColor{
+    color: whitesmoke;
 }

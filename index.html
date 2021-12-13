@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -13,61 +13,56 @@
   <script src="https://kit.fontawesome.com/6e90fa897f.js" crossorigin="anonymous"></script>
   <title>Proyecto Gimnasio</title>
 </head>
-
-<body>
+<body class="colorbg">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navfixed">
+      <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="img/LogoV.png" alt="logo de pagina Gimnasio" width="150" />
+            <img src="img/LogoV.png" alt="Logo del Navbar "width="80px">   
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGimnasio"
-          aria-controls="navbarGimnasio" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarGimnasio">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item mx-5">
-              <a href="#" title="" class="nav-accounts-link">Registro</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fuenteAlumi fs-5 ">
+            <li class="nav-item">
+              <a class="text-white nav-link" aria-current="page" href="paginas/login.html">Login</a>
+            </li> 
+            <li class="nav-item">
+              <a class="text-white nav-link" href="pages/contacto.html">Store</a>
             </li>
-            <li class="nav-item mx-5">
-              <a href="#" title="" class="nav-accounts-link">Inicio de sesión</a>
+            <li class="nav-item">
+              <a class="text-white nav-link" href="paginas/quienesSomos.html">Quienes Somos</a>
             </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarGimnasio">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item mx-5">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            <li class="nav-item">
+              <a class="text-white nav-link" href="paginas/quienesSomos.html">Registro</a>
             </li>
-            <li class="nav-item mx-5">
-              <a class="nav-link" href="#">Quienes somos</a>
-            </li>
-            <li class="nav-item m">
-              <a class="nav-link" href="#">STORE</a>
+            <li class="nav-item">
+              <form class="d-flex">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                </div>
+              </form>
             </li>
           </ul>
-          <form class="d-flex">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
-                aria-describedby="button-addon2">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
-            </div>
-          </form>
         </div>
       </div>
     </nav>
   </header>
   <main>
-    <section>
+    <section class="mslider">
       <div id="bannerGimnasio" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#bannerGimnasio" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#bannerGimnasio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#bannerGimnasio" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
         <div class="carousel-inner">
@@ -80,160 +75,149 @@
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#bannerGimnasio" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="visually-hidden">Anterior</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#bannerGimnasio" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="visually-hidden">Siguiente</span>
         </button>
       </div>
     </section>
     <!--  Banner de Productos -->
-    <h2 class="display-6 text-center my-5">Lo mas vendido</h2>
-    <div class="container-fluid">
-      <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container">
-              <div class="d-flex flex-row">
-                <div class="col-12 col-md-3 mx-1">
-                  <div class="card text-center">
-                    <div class="text-center">
-                      <img src="img/Calza.jpg" class="img-card " alt="calza mujer" />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Calza mujer</h5>
-                    </div>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Detalle</a>
-                      <a href="#" class="card-link">Comprar</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-3 mx-1">
-                  <div class="card text-center">
-                    <div class="text-center">
-                      <img src="img/BicicletaFija.jpg" class="img-card " alt="bicicleta fija" />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Bicicleta Fija</h5>
-                    </div>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Detalle</a>
-                      <a href="#" class="card-link">Comprar</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-3 mx-1">
-                  <div class="card text-center">
-                    <div class="text-center">
-                      <img src="img/MusculosaHombre.jpg" class="img-card " alt="musculosa hombre" />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Musculosa hombre</h5>
-                    </div>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Detalle</a>
-                      <a href="#" class="card-link">Comprar</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-3 mx-1">
-                  <div class="card text-center">
-                    <div class="text-center">
-                      <img src="img/PesaRusa.jpg" class="img-card " alt="pesa rusa" />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Pesa rusa</h5>
-                    </div>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Detalle</a>
-                      <a href="#" class="card-link">Comprar</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="d-flex flex-row">
-                <div class="col-12 col-md-3 mx-1">
-                  <div class="card text-center">
-                    <div class="text-center">
-                      <img src="img/TopReebok.jpg" class="img-card " alt="top" />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Top</h5>
-                    </div>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Detalle</a>
-                      <a href="#" class="card-link">Comprar</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-3 mx-1">
-                  <div class="card text-center">
-                    <div class="text-center">
-                      <img src="img/Mancuernas.jpg" class="img-card " alt="mancuernas" />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Mancuernas</h5>
-                    </div>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Detalle</a>
-                      <a href="#" class="card-link">Comprar</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-3 mx-1">
-                  <div class="card text-center">
-                    <div class="text-center">
-                      <img src="img/Calza.jpg" class="img-card " alt="calza mujer" />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Calza mujer</h5>
-                    </div>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Detalle</a>
-                      <a href="#" class="card-link">Comprar</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-3 mx-1">
-                  <div class="card text-center">
-                    <div class="text-center">
-                      <img src="img/BicicletaFija.jpg" class="img-card " alt="bicicleta fija" />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Bicicleta Fija</h5>
-                    </div>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Detalle</a>
-                      <a href="#" class="card-link">Comprar</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <section class="container">
+      <h1 class="display-3 text-center pt-3 titulosColor">Lo Más Vendido!</h1>
+      <article class="row justify-content-center">
+        <div class="col-sm-12 col-md-4 col-lg-3 my-2 mt-4 mb-4">
+          <div class="card estreno cardestreno">
+            <img src="img/Caminadora.jpg" class="card-img-top" alt="Caminadora" data-bs-toggle="modal"
+            data-bs-target="#caminadora">
+            <div class="card-body">
+              <h5 class="card-title text-center fuenteAlumi fs-2">Caminadora</h5>
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev black" type="button" data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon black" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next black" type="button" data-bs-target="#carouselExampleControls"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon black" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+    <!-- Modal caminadora -->
+    <div class="modal fade" id="caminadora" tabindex="-1" aria-labelledby="caminadoraModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="caminadoraModalLabel">Caminadora</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><b>DESCRIPCIÓN :</b> Caminadora electrica profesional uso continuo
+              4.0 chp motor continuo y el motor mas silecioso de la actualidad
+              de 0 hasta 18 % de inclinacion con solo picar un boton
+              banda para correr de 60 cm x 1.62 mts de largo, banda para uso comercial
+              capacidad de 390 lbs para que funcione a su maxima capacidad
+              pantalla led con bloques de medicion de velocidad, tiempo, distancia, pulso cardiaco, calorias, inclinacion
+              suspension que amortigua los pasos
+              con entrada de audio 3.5 mm para musica de cualquier dispositivo</p>
+          </div>
+          <div class="modal-footer">
+            <span class="badge bg-warning text-dark">Más Vendido</span>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
       </div>
     </div>
+        <div class="col-sm-12 col-md-4 col-lg-3 my-2 mt-4 mb-4">
+          <div class="card estreno cardestreno">
+            <img src="img/BicicletaFija.jpg" class="card-img-top" alt="BicicletaFija" data-bs-toggle="modal"
+            data-bs-target="#BicicletaFija">
+            <div class="card-body">
+              <h5 class="card-title text-center fuenteAlumi fs-2">Bicicleta Fija</h5>
+            </div>
+          </div>
+        </div>
+    <!-- Modal Bicicleta Fija -->
+    <div class="modal fade" id="BicicletaFija" tabindex="-1" aria-labelledby="BicicletaFijaModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="BicicletaFijaModalLabel">Bicicleta Fija</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><b>DESCRIPCIÓN :</b> <b>1-</b> Mecanismo de cadena suave y silencioso.
+              <b>2-</b> Para uso rudo, freno de emergencia con almohadilla de fricción, varias resistencias ajustables.
+              <b>3-</b> Peso del disco es de 40 lbs flywheel
+              <b>4-</b> Capacidad de usuario 150 kg
+              <b>5-</b> Manubrio y asiento totalmente armado.
+              <b>6-</b> Llantitas para fácil transporte.n
+              <b>7-</b> Pesa 45 kg</p>
+          </div>
+          <div class="modal-footer">
+            <span class="badge bg-warning text-dark">Más Vendido</span>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>    
+        <div class="col-sm-12 col-md-4 col-lg-3 my-2 mt-4 mb-4">
+          <div class="card estreno cardestreno">
+            <img src="img/CurlDePierna.jpg" class="card-img-top" alt="CurlDePierna" data-bs-toggle="modal"
+            data-bs-target="#CurlDePierna">
+            <div class="card-body">
+              <h5 class="card-title text-center fuenteAlumi fs-2">Curl De Pierna</h5>
+            </div>
+          </div>
+        </div>
+    <!-- Modal Curl de Pierna -->
+    <div class="modal fade" id="CurlDePierna" tabindex="-1" aria-labelledby="CurlDePiernaModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="CurlDePiernaModalLabel">Curl de Pierna</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><b>DESCRIPCIÓN :</b> <b>1-</b> Mecanismo de cadena suave y silencioso.
+              <b>2-</b> Para uso rudo, freno de emergencia con almohadilla de fricción, varias resistencias ajustables.
+              <b>3-</b> Peso del disco es de 40 lbs flywheel
+              <b>4-</b> Capacidad de usuario 150 kg
+              <b>5-</b> Manubrio y asiento totalmente armado.
+              <b>6-</b> Llantitas para fácil transporte.n
+              <b>7-</b> Pesa 45 kg</p>
+          </div>
+          <div class="modal-footer">
+            <span class="badge bg-warning text-dark">Más Vendido</span>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>      
+        <div class="col-sm-12 col-md-4 col-lg-3 my-2 mt-4 mb-4">
+          <div class="card estreno cardestreno">
+            <img src="img/Mancuernas.jpg" class="card-img-top" alt="Mancuernas" data-bs-toggle="modal"
+            data-bs-target="#Mancuernas">
+            <div class="card-body">
+              <h5 class="card-title text-center fuenteAlumi fs-2">Mancuernas</h5>
+            </div>
+          </div>
+        </div>
+    <!-- Modal Mancuernas -->
+    <div class="modal fade" id="Mancuernas" tabindex="-1" aria-labelledby="MancuernasModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="MancuernasModalLabel">Mancuernas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><b>DESCRIPCIÓN :</b> Mancuernas de hierro cromado
+          </div>
+          <div class="modal-footer">
+            <span class="badge bg-warning text-dark">Más Vendido</span>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>    
     <!-- Categorias  -->
     <section class="container">
       <div class="my-5">
-        <h1 class="display-6 text-center">Categorias</h1>
+        <h2 class="display-6 text-center titulosColor">Categorias</h2>
       </div>
       <article class="row my-5">
         <div class="col-sm-12 col-md-4">
@@ -263,19 +247,16 @@
       </article>
     </section>
     <div class="container my-5">
-      <h1 class="display-4 text-center">
+      <h2 class="display-4 text-center titulosColor">
         Elegí, pagá y recibí tu pedido sin moverte de tu casa!
-      </h1>
+      </h2>
       <hr />
-    </div>
-    <div class="container-fluid text-center">
-      <img src="img/Logo Completo NEGRO - RollingoCode.fw (1).png" alt="publicidad RollingCode" class="my-5">
     </div>
   </main>
   <footer class="bg-dark py-4 text-light">
     <section class="container">
       <article class="row">
-        <div class="col-sm-12 col-md-4 col-lg-3 my-2">
+        <div class="col-sm-12 col-md-4 col-lg-3 my-2 text-center">
           <img src="img/LogoV.png" alt="Logo de Gimnasio" width="200" />
         </div>
         <div class="col-sm-12 col-md-4 col-lg-3 my-2 text-center">
