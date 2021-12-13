@@ -9,6 +9,7 @@
     <meta name="keysword" content="js, crud" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Proyecto Gimnasio</title>
 </head>
@@ -114,16 +115,16 @@
                 Debe ingresar una URL
               </div>
             </div>
-            <button class="btn btn-primary" type="submit">Guardar</button>                   
+            <button class="btn colorSuscripcion" type="submit">Guardar</button>                   
         </form>
         <div class="alert alert-danger my-5 d-none" role="alert" id="msjAlerta">
           Completar todos los campos
         </div>
         </section>
         <section class="my-5">
-          <h2 class="display-3 text-center">Productos Cargados</h2>
-          <hr />
-          <table class="table table-responsive mt-5">
+          <h2 class="display-3 text-center titulosColor">Productos Cargados</h2>
+          <hr/> 
+          <table class="tabla table mt-5 titulosColor">
             <thead>
               <tr class="fw-bold text-center">
                 <th>Cod.</th>
@@ -131,12 +132,12 @@
                 <th>Descripcion</th>
                 <th>Cantidad</th>
                 <!-- <th>Url</th> -->
-                <th>Acciones</th>
+                <th scope="col">Acciones</th>
               </tr>
             </thead>
             <tbody id="tablaProductos">
              <hr>
-             <button class="btn btn-primary" id="botonNuevo" >Nuevo</button> 
+             <button class="btn colorSuscripcion" id="botonNuevo" >Nuevo</button> 
             </tbody>
           </table>
         </section>
