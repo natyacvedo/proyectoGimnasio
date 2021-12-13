@@ -5,135 +5,136 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Ropa Deportiva" />
-    <meta
-      name="Diego Fernández"
-      content="Natalia Acevedo, Rodrigo Exequiel Bazán Veliz, Rocío Toscano, Santiago morales Alcorta, Diego Fernandez"
-    />
+    <meta name="author" content="Natalia Acevedo, Rodrigo Exequiel Bazán Veliz, Rocío Toscano, Santiago morales Alcorta, Diego Fernandez"/>
     <meta name="keywords" content="venta de ropa deportiva" />
-    <!-- CSS only bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/e304c7dec7.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/e304c7dec7.js" crossorigin="anonymous"></script>
     <title>Venta de Ropa deportiva</title>
     <link rel="shortcut icon" href="../img/iconPage.png">
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark colorFondo fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navfixed">
         <div class="container">
           <a class="navbar-brand" href="../index.html">
-            <img src="../img/LogoV.png" alt="imagen del logotipo " width="90px" />
+              <img src="../img/LogoV.png" alt="Logo del Navbar "width="80px">   
           </a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navBarPlantilla"
-            aria-controls="navBarPlantilla"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navBarPlantilla">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item mx-2">
-                <a class="nav-link" aria-current="page" href="../index.html"
-                  >Inicio</a
-                >
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 ">
+              <li class="nav-item">
+                <a class="text-white nav-link" aria-current="page" href="paginas/login.html">Login</a>
+              </li> 
+              <li class="nav-item">
+                <a class="text-white nav-link" href="admin.html">Admin</a>
               </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="Store.html">
-                  Quienes Somos
-                </a>
+              <li class="nav-item">
+                <a class="text-white nav-link" href="quienesSomos.html">Quienes Somos</a>
               </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="/quienesSomos.html"
-                  >Store</a
-                >
+              <li class="nav-item">
+                <a class="text-white nav-link" href="registro.html">Registro</a>
               </li>
-              <li class="nav-item px-1 mx-2">
-                <a href="login.html" class="btn colorBotonIS marginBotonesNav">Iniciar Sesión</a>
-              </li>
-              <li class="nav-item px-1 mx-2">
-                <button
-                  class="btn colorSuscripcion marginBotonesNav"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#ModalSuscripcion"
-                >
-                  Suscripción
-                </button>
+              <li class="nav-item">
+                <form class="d-flex">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
+                      aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                  </div>
+                </form>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main class="container-fluid py-5 my-5">
-      <div class="d-flex justify-content-center w-100">
-        <img src="../img/404.gif" alt="imagen de error" class="w-100" />
+    <main class="container py-1 mt-5">
+      <div class="d-flex justify-content-center w-100 mt-2">
+        <img src="../img/error 404.jpg" alt="imagen de error" class="w-100 mt-5"/>
       </div>
     </main>
-    <footer class="container-fluid colorFondo">
+    <footer class="bg-dark py-4 text-light">
       <section class="container">
         <article class="row">
-        <div class="col-sm-12 col-md-4 col-lg-4 py-4 logoResponsive">
-          <a href="../index.html"><img src="../img/LogoV.png" alt="icono del logotipo " width="90px"></a>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-4 py-4">
-          <ul class="navbar-nav ms-0 mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active text-light aria-current="
-                href="../index.html"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="Store.html"
-                >Quienes Somos</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="quienesSomos.html"
-                >Store</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="Contacto.html"
-                >Contacto</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="Error404.html"
-                >Legales</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-4 py-4  text-light">
-          <h5 class="logoResponsive">Seguinos en nuestras redes</h5>
-          <div class=" d-flex redesResponsive">
-            <a href="Error504.html" class="text-white facebook" target="blank"
-              ><i class="fab fa-facebook-square fa-2x px-1"></i
-            ></a>
-            <a href="Error504.html" class="text-white twitter" target="blank"
-              ><i class="fab fa-twitter-square fa-2x px-1"></i
-            ></a>
-            <a href="Error504.html" class="text-white instagram" target="blank"
-              ><i class="fab fa-instagram fa-2x px-1"></i
-            ></a>
+          <div class="col-sm-12 col-md-4 col-lg-3 my-2 text-center">
+            <img src="../img/LogoV.png" alt="Logo de Gimnasio" width="200" />
           </div>
-        </div>
-      </article>
+          <div class="col-sm-12 col-md-4 col-lg-3 my-2 text-center">
+            <h5>Contacto</h5>
+            <div class="text-secondary">
+              <p>3813426862</p>
+              <p>tiendavictorius@gmail.com</p>
+              <p>No es un local a la calle</p>
+            </div>
+          </div>
+          <div class="col-md footer-payments-shipping-logos text-center col-sm-12 col-md-4 col-lg-3 my-2">
+            <h5>Medios de pago</h5>
+            <div class="mb-5">
+              <img src="../img/visa.png"
+                data-src=""
+                class="icon-logo lazyloaded" alt="visa" width="32" height="20" />
+              <img
+                src="../img/mastercard.png"
+                data-src=""
+                class="icon-logo lazyloaded" alt="mastercard" width="32" height="20" />
+              <img src="../img/cabal.png"
+                data-src=""
+                class="icon-logo lazyloaded" alt="ar_cabal" width="32" height="20" />
+              <img
+                src="../img/naranja.png"
+                data-src=""
+                class="icon-logo lazyloaded" alt="ar_tarjeta-naranja" width="32" height="20" />
+              <img
+                src="../img/mercadopago.png"
+                data-src=""
+                class="icon-logo lazyloaded" alt="mercadopago" width="32" height="20" />
+              <img src="../img/nativa.png"
+                data-src=""
+                class="icon-logo lazyloaded" alt="nativa" width="32" height="20" />
+              <img
+                src="../img/pagofacil.png"
+                data-src=""
+                class="icon-logo lazyloaded" alt="pagofacil" width="32" height="20" />
+              <img src="../img/rapipago.png"
+                data-src=""
+                class="icon-logo lazyloaded" alt="rapipago" width="32" height="20" />
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3 my-2">
+            <div class="text-center">
+              <h5>Seguinos en redes</h5>
+              <div class="centrar">
+                <a href="https://fontawesome.com/v5.15/icons/twitter-square?style=brands" target="_blank"
+                  class="text-secondary mx-2">
+                  <i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="https://fontawesome.com/v5.15/icons/twitter-square?style=brands" target="_blank"
+                  class="text-secondary mx-2">
+                  <i class="fab fa-instagram-square fa-2x"></i></a>
+                <a href="https://fontawesome.com/v5.15/icons/twitter-square?style=brands" target="_blank"
+                  class="text-secondary mx-2">
+                  <i class="fab fa-twitter-square fa-2x"></i></a>
+              </div>
+            </div>
+        </article>
       </section>
+      <div class="text-center">
+        &copy; Todos los derechos reservados
+        <p>Defensa de las y los consumidores. Para reclamos
+          <a class="font-weight-bold" href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario"
+            target="_blank"> ingrese aquí</a></p>
+      </div>
+      </div>
     </footer>
-
-    <!-- JavaScript  -->
     <script src="../js/bootstrap.min.js"></script>
   </body>
 </html>
